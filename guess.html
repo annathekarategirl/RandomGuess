@@ -7,7 +7,9 @@
     <script>
         let randomNumber = Math.floor(Math.random() * 10) + 1;
         var userGuess= Number(prompt("Guess a number between 1 and 10"));
+        let i=0
         while (true){
+            i++
             if(userGuess==999){
                 break;}
             if(userGuess>randomNumber){
@@ -15,12 +17,12 @@
             else if (userGuess<randomNumber){
                 var userGuess=Number(prompt("Too low, guess again: "));
             }
-            else if(userGuess.isNaN()){
+            else if(isNaN(userGuess)){
                 var userGuess=Number(prompt("Type a number"));
             }
             
             else{
-            alert(`Congratulations, you've guessed it in [Number of attempts] tries!`);
+            alert(`Congratulations, you've guessed it in `+i+` tries!`);
             break;
         }
         }
