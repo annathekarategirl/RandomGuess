@@ -6,16 +6,19 @@
     <title>Random Guess</title>
     <script>
         let randomNumber = Math.floor(Math.random() * 10) + 1;
-        let i=0
+        var userGuess= Number(prompt("Guess a number between 1 and 10"));
         while (true){
-            if (i=0){
-            let userGuess= Number(prompt("Guess a number between 1 and 10"));
-        i++}
+            if(userGuess==999){
+                break;}
             if(userGuess>randomNumber){
-                let userGuess= Number(prompt("Too high! Guess again:")); }
+                var userGuess= Number(prompt("Too high! Guess again:")); }
             else if (userGuess<randomNumber){
-                let userGuess=Number(prompt("Too low, guess again: "));
+                var userGuess=Number(prompt("Too low, guess again: "));
             }
+            else if(userGuess.isNaN()){
+                var userGuess=Number(prompt("Type a number"));
+            }
+            
             else{
             alert(`Congratulations, you've guessed it in [Number of attempts] tries!`);
             break;
