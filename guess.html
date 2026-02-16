@@ -6,6 +6,7 @@
     <title>Random Guess</title>
     <script>
         let randomNumber = Math.floor(Math.random() * 10) + 1;
+        console.log(randomNumber)
         let userGuess= Number(prompt("Guess a number between 1 and 10"));
         while (!(userGuess==randomNumber)){
             if(userGuess>randomNumber){
